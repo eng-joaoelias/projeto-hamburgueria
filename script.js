@@ -97,22 +97,19 @@ function atualizaCarrinhoModal() {
 function removerItemDoCarrinho(event) {
     if (event.target.classList.contains("btn-remove-do-carrinho")) {
         const nome = event.target.getAttribute("data-name");
+        const indice = itensCarrinho.findIndex(item => item.nomeItem === nome);
 
-        const indice = itensCarrinho.findIndex(item => item.nomeItem = nome);
-        if (indice != -1) {
-            //item encontrado
+        if (indice !== -1) {
             const item = itensCarrinho[indice];
-            if (item.quantidade > 1) {
-                item.quantidade = item.quantidade - 1;
-                atualizaCarrinhoModal();
-                return;
+            item.quantidade -= 1; // Sempre decrementa a quantidade em 1
+            if (item.quantidade <= 0) {
+                itensCarrinho.splice(indice, 1);
             }
-
-            itensCarrinho.splice(indice, 1);
             atualizaCarrinhoModal();
         }
     }
 }
+
 
 btnAbrirCarrinho.addEventListener("click", mostrarModalCarrinho);
 
@@ -181,7 +178,7 @@ btnCheckout.addEventListener("click", function () {
     }).join("");
 
     const mensagem = encodeURIComponent(listaItensCarrinho);
-    const phone = "+5571986752073";
+    const phone = "+5571999580275";
 
     window.open(`https://wa.me/${phone}?text=${mensagem} Endereço ${inputEndereco.value}`, "_blank");
 
