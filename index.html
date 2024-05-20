@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <title>SaborArte Burgers: Hamburgeria do Programador</title>
+</head>
+
+<body>
+    <!--HEADER-->
+
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/restaurante/logo.jpg" alt="Logo do estabelecimento"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">SaborArte Burgers</h1>
+
+            <span class="text-white font-medium">Baixa dos Sapateiros, Baixa dos Sapateiros, Salvador, BA,
+                40025005</span>
+
+            <div class="px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">
+                    Seg. a Dom. - 18:00 as 22:00.
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!--FIM DO HEADER-->
+
+    <!--CARDÁPIO-->
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-7">
+        Conheça o nosso cardápio!
+    </h2>
+
+    <!--INÍCIO DO MENU-->
+
+    <div id="menu">
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-1.png" alt="Hambúrguer Clássico"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer Clássico</p>
+
+                    <p class="text-sm">
+                        Um hambúrguer suculento de carne angus grelhada, coberto com queijo cheddar
+                        derretido, alface crocante, tomate fresco e cebola roxa, servido em um pão de brioche tostado. O
+                        clássico que nunca sai de moda.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18,90</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn" data-name="Hambúrguer Clássico"
+                            data-price="18.9">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-2.png" alt="Hambúrguer BBQ Cowboy"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer BBQ Cowboy</p>
+
+                    <p class="text-sm">
+                        Uma explosão de sabores do oeste! Este hambúrguer apresenta uma carne angus grelhada coberta com
+                        bacon defumado, cebola caramelizada, queijo pepper jack picante e um toque generoso de molho
+                        barbecue, tudo servido em um pão de cerveja artesanal.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 21,50</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn" data-name="Hambúrguer BBQ Cowboy"
+                            data-price="21.5">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-3.png" alt="Hambúrguer Vegano Mediterrâneo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer Vegano Mediterrâneo</p>
+
+                    <p class="text-sm">
+                        Para os amantes de vegetais! Um hambúrguer de grão-de-bico e quinoa, temperado com ervas
+                        mediterrâneas, coberto com homus cremoso, tomate seco, rúcula fresca e azeitonas pretas, servido
+                        em um pão de multigrãos tostado.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 17,90</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn"
+                            data-name="Hambúrguer Vegano Mediterrâneo" data-price="17.9">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-4.png" alt="Hambúrguer Picante Mexicano"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer Picante Mexicano</p>
+
+                    <p class="text-sm">
+                        Uma explosão de sabor latino! Este hambúrguer apresenta carne angus grelhada coberta com
+                        guacamole fresco, jalapeños picantes, queijo pepper jack derretido, pico de gallo e uma pitada
+                        de pimenta chipotle, tudo servido em um pão de milho tostado.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 20,50</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn"
+                            data-name="Hambúrguer Picante Mexicano" data-price="20.5">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-5.png" alt="Hambúrguer de Frango Caprese"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer de Frango Caprese</p>
+
+                    <p class="text-sm">
+                        Uma versão leve e fresca! Um hambúrguer de peito de frango grelhado, coberto com mozarela de
+                        búfala fresca, tomate fatiado, manjericão fresco e um fio de redução de balsâmico, tudo servido
+                        em um pão ciabatta tostado.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 19,50</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn"
+                            data-name="Hambúrguer de Frango Caprese" data-price="19.5">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-6.png" alt="Hambúrguer de Cordeiro Grego"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer de Cordeiro Grego</p>
+
+                    <p class="text-sm">
+                        Uma aventura culinária do Mediterrâneo! Este hambúrguer apresenta cordeiro temperado com
+                        especiarias gregas, coberto com tzatziki cremoso, cebola roxa em conserva, tomate e folhas de
+                        alface, tudo servido em um pão pita levemente grelhado.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 22,90</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn"
+                            data-name="Hambúrguer de Cordeiro Grego" data-price="22.9">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-7.png" alt="Hambúrguer Surf & Turf"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer Surf & Turf</p>
+
+                    <p class="text-sm">
+                        O melhor dos dois mundos! Um hambúrguer de carne angus grelhada, coberto com carne de caranguejo
+                        desfiada, queijo suíço derretido, alface crocante, tomate e um toque de maionese de alho, tudo
+                        servido em um pão de brioche tostado.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 24,90</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn" data-name="Hambúrguer Surf & Turf"
+                            data-price="24.9">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM-->
+            <div class="flex gap-2">
+
+                <img src="./assets/restaurante/hamb-8.png" alt="Hambúrguer de Portobello Grelhado"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Hambúrguer de Portobello Grelhado</p>
+
+                    <p class="text-sm">
+                        Uma opção vegetariana robusta! Um grande cogumelo Portobello grelhado, marinado em temperos
+                        aromáticos, coberto com queijo gorgonzola derretido, cebolas caramelizadas, rúcula fresca e
+                        molho balsâmico, tudo servido em um pão de focaccia tostado.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18,90</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn"
+                            data-name="Hambúrguer de Portobello Grelhado" data-price="18.9">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="text-2xl md:text-3xl font-bold py-3">Bebidas</h2>
+        </div>
+
+        <!--GRID BEBIDAS-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+            <!--BEBIDA ITEM-->
+            <div class="flex gap-2 w-full">
+
+                <img src="./assets/restaurante/refri-1.png" alt="Latinha Coca-Cola 350ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Latinha Coca-Cola 350ml</p>
+
+                    <p class="text-sm">A clássica e refrescante Coca-Cola, perfeita para acompanhar qualquer hambúrguer.
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6,00</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn" data-name="Latinha Coca-Cola 350ml"
+                            data-price="6">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM-->
+            <div class="flex gap-2 w-full">
+
+                <img src="./assets/restaurante/refri-2.png" alt="Latinha Guaraná Antarctica 350ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Latinha Guaraná Antarctica 350ml</p>
+
+                    <p class="text-sm">O sabor único e refrescante do Guaraná Antarctica, uma opção brasileira
+                        deliciosa.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6,00</p>
+                        <button class="bg-gray-900 px-5 rounded add-carrinho-btn"
+                            data-name="Latinha Guaraná Antarctica 350ml" data-price="6">
+                            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+        </div>
+        <!--FIM GRID BEBIDAS-->
+
+    </div>
+
+    <!--FIM DO MENU-->
+
+    <!--FIM DO CARDÁPIO-->
+
+    <!--MODAL CARD-->
+    <div class="bg-black/65 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+        id="modal-carrinho">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[40%]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="carrinho-itens" class="flex justify-between mb-2 flex-col">
+
+            </div>
+
+            <p class="font-bold">Total: <span id="carrinho-total"></span>
+            </p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+
+            <input type="text" id="endereco" placeholder="Digite seu endereço completo"
+                class="w-full border-2 p-1 rounded my-1">
+
+            <p class="text-red-600 hidden" id="alerta-endereco">Digite seu endereço completo!</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="btn-fechar-modal">
+                    Fechar
+                </button>
+
+                <button id="botao-checkout" class="bg-green-500 text-white px-4 py-1 rounded">
+                    Finalizar pedido
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!--FIM MODAL CARD-->
+
+    <!--BUTTON CARD FOOTER-->
+
+    <footer class="w-full bg-red-600 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="carrinho-btn">
+            ( <span id="cart-count"></span> )
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white" aria-hidden="true"></i>
+        </button>
+    </footer>
+
+    <!--FIM BUTTON CARD FOOTER-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
